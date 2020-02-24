@@ -31,6 +31,10 @@ enum custom_keycodes {
 #define MY_PIPE RALT(KC_NUBS)
 #define MY_BCKSL RALT(KC_MINS)
 #define MY_TILDE RALT(KC_RBRC)
+#define MY_ASTR LSFT(KC_RBRC)
+// Single quote
+#define MY_S_QUO LSFT(KC_BSLS)
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -44,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    ARROW,            KC_RALT, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    KC_BSPC, KC_ENT,  KC_LCTL,                   SPECIAL, KC_SPC,  KC_LGUI 
+                                    KC_LGUI, KC_BSPC, KC_LCTL,                   SPECIAL, KC_SPC,  KC_ENT 
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -66,9 +70,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                              KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                            KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_NO,
+     MY_TILDE,KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                            KC_CIRC, KC_AMPR, MY_ASTR, KC_LPRN, KC_RPRN, MY_S_QUO,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_NO,   KC_NO,   BCK_A_L, BCK_S_L, BCK_C_L, MY_BCKSL,                           MY_PIPE, BCK_C_R, BCK_S_R, BCK_A_R, RGB_VAI, KC_NO,
+     KC_NO,   BCK_A_L, BCK_R_L, BCK_S_L, BCK_C_L, MY_BCKSL,                           MY_PIPE, BCK_C_R, BCK_S_R, BCK_R_R, BCK_A_R, KC_NUHS,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSFT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   ADJUST,           KC_RALT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
