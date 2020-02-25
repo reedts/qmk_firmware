@@ -32,6 +32,7 @@ enum custom_keycodes {
 #define MY_BCKSL RALT(KC_MINS)
 #define MY_TILDE RALT(KC_RBRC)
 #define MY_ASTR LSFT(KC_RBRC)
+#define MY_SLSH LSFT(KC_7)
 // Single quote
 #define MY_S_QUO LSFT(KC_BSLS)
 
@@ -70,9 +71,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                              KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     MY_TILDE,KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                            KC_CIRC, KC_AMPR, MY_ASTR, KC_LPRN, KC_RPRN, MY_S_QUO,
+     MY_TILDE,KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                            KC_GRV,  KC_AMPR, MY_ASTR, KC_RBRC, KC_SLSH, MY_S_QUO,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_NO,   BCK_A_L, BCK_R_L, BCK_S_L, BCK_C_L, MY_BCKSL,                           MY_PIPE, BCK_C_R, BCK_S_R, BCK_R_R, BCK_A_R, KC_NUHS,
+     KC_NO,   BCK_A_L, BCK_S_L, BCK_C_L, BCK_R_L, MY_BCKSL,                           MY_PIPE, BCK_R_R, BCK_C_R, BCK_S_R, BCK_A_R, KC_NUHS,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSFT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   ADJUST,           KC_RALT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
