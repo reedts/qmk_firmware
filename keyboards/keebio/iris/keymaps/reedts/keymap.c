@@ -7,9 +7,9 @@ enum custom_keycodes {
   _ADJUST,
 };
 
-#define ARROW MO(_ARROW)
-#define SPECIAL TT(_SPECIAL)
-#define ADJUST MO(_ADJUST)
+#define FNARROW MO(_ARROW)
+#define FNSPCL TT(_SPECIAL)
+#define FNADJ MO(_ADJUST)
 
 // brackets L (left) and R (right)
 // BCK_R = Bracket round
@@ -33,8 +33,20 @@ enum custom_keycodes {
 #define MY_TILDE RALT(KC_RBRC)
 #define MY_ASTR LSFT(KC_RBRC)
 #define MY_SLSH LSFT(KC_7)
+#define MY_EQUL LSFT(KC_0)
+#define MY_QUES LSFT(KC_MINS)
+#define MY_EXCL LSFT(KC_1)
+#define MY_HASH KC_BSLS
+#define MY_DLR LSFT(KC_4)
+#define MY_PERC LSFT(KC_5)
+#define MY_AMPR LSFT(KC_6)
 // Single quote
 #define MY_S_QUO LSFT(KC_BSLS)
+#define MY_D_QUO LSFT(KC_2)
+
+#define MY_PLUS KC_RBRC
+#define MY_MINS KC_SLSH
+#define MY_TICK KC_EQL
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -47,9 +59,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_ESC,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                               KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    ARROW,            KC_RALT, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    FNARROW,          KC_RALT, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    KC_LGUI, KC_BSPC, KC_LCTL,                   SPECIAL, KC_SPC,  KC_ENT 
+                                    KC_LGUI, KC_BSPC, KC_LCTL,                   FNSPCL , KC_SPC,  KC_ENT 
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -71,11 +83,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                              KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     MY_TILDE,KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                            KC_GRV,  KC_AMPR, MY_ASTR, KC_RBRC, KC_SLSH, MY_S_QUO,
+     KC_NO,   MY_TILDE,MY_DLR,  MY_PERC, MY_HASH, MY_S_QUO,                           MY_D_QUO,MY_PLUS, MY_MINS, MY_ASTR, MY_EQUL, MY_TICK,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_NO,   BCK_A_L, BCK_S_L, BCK_C_L, BCK_R_L, MY_BCKSL,                           MY_PIPE, BCK_R_R, BCK_C_R, BCK_S_R, BCK_A_R, KC_NUHS,
+     MY_QUES, BCK_A_L, BCK_S_L, BCK_C_L, BCK_R_L, MY_BCKSL,                           MY_SLSH, BCK_R_R, BCK_C_R, BCK_S_R, BCK_A_R, MY_EXCL,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   ADJUST,           KC_RALT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
+     KC_LSFT, KC_GRV,  KC_NO,   KC_NO,   KC_NO,   MY_AMPR, FNADJ,            KC_RALT, MY_PIPE, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_RSFT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     KC_NO,   KC_NO,   KC_NO,                     KC_TRNS, KC_NO,   KC_NO
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
