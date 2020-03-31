@@ -8,8 +8,8 @@ enum custom_keycodes {
 };
 
 #define FNARROW MO(_ARROW)
-#define FNSPCL TT(_SPECIAL)
-#define FNADJ MO(_ADJUST)
+#define FNSPCL MO(_SPECIAL)
+#define FNADJ TT(_ADJUST)
 
 // brackets L (left) and R (right)
 // BCK_R = Bracket round
@@ -75,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_NO,   KC_NO,   KC_MUTE, KC_DEL,  KC_END,  KC_PGDN, KC_TRNS,          KC_RALT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    KC_NO,   KC_NO,   KC_NO,                     KC_NO,   KC_NO,   KC_NO
+                                    KC_NO,   KC_NO,   KC_LCTL,                   KC_NO,   KC_NO,   KC_NO
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -89,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
      KC_LSFT, KC_GRV,  KC_NO,   KC_NO,   KC_NO,   MY_AMPR, FNADJ,            KC_RALT, MY_PIPE, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_RSFT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    KC_NO,   KC_NO,   KC_NO,                     KC_TRNS, KC_NO,   KC_NO
+                                    KC_NO,   KC_NO,   KC_LCTL,                   KC_TRNS, KC_NO,   KC_NO
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
