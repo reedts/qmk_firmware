@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      MY_EXCL, BCK_A_L, BCK_S_L, BCK_C_L, BCK_R_L, MY_BCKSL,                           MY_SLSH, BCK_R_R, BCK_C_R, BCK_S_R, BCK_A_R, MY_QUES,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT, KC_GRV,  KC_NO,   KC_NO,   KC_NO,   MY_AMPR, FNADJ,            KC_RALT, MY_PIPE, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_RSFT,
+     KC_LSFT, KC_GRV,  KC_NO,   KC_NO,   KC_GRV,  MY_AMPR, FNADJ,            KC_RALT, MY_PIPE, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_RSFT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     KC_NO,   KC_NO,   KC_LCTL,                   KC_TRNS, KC_NO,   KC_NO
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
