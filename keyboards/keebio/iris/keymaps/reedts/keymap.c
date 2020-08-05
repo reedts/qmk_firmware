@@ -40,6 +40,7 @@ enum custom_keycodes {
 #define MY_DLR LSFT(KC_4)
 #define MY_PERC LSFT(KC_5)
 #define MY_AMPR LSFT(KC_6)
+#define MY_AT RALT(KC_Q)
 // Single quote
 #define MY_S_QUO LSFT(KC_BSLS)
 #define MY_D_QUO LSFT(KC_2)
@@ -59,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_ESC,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                               KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    FNARROW,          KC_RALT, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    FNARROW,          KC_LALT, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                     KC_LGUI, KC_BSPC, KC_LCTL,                   FNSPCL , KC_SPC,  KC_ENT 
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
@@ -73,9 +74,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      KC_NO,   KC_BRID, KC_VOLD, KC_INS,  KC_HOME, KC_PGUP,                            KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_PLUS, KC_NUHS,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_NO,   KC_NO,   KC_MUTE, KC_DEL,  KC_END,  KC_PGDN, KC_TRNS,          KC_RALT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
+     KC_NO,   KC_NO,   KC_MUTE, KC_DEL,  KC_END,  KC_PGDN, KC_TRNS,          KC_LALT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
   //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                    KC_NO,   KC_NO,   KC_LCTL,                   KC_NO,   KC_NO,   KC_NO
+                                    KC_NO,   KC_NO,   KC_LCTL,                   KC_CAPS, KC_NO,   KC_NO
                                 // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
   ),
 
@@ -83,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
      KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                              KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_NO,   MY_TILDE,MY_DLR,  MY_PERC, MY_HASH, MY_S_QUO,                           MY_D_QUO,MY_PLUS, MY_MINS, MY_ASTR, MY_EQUL, MY_TICK,
+     MY_AT,   MY_TILDE,MY_DLR,  MY_PERC, MY_HASH, MY_S_QUO,                           MY_D_QUO,MY_PLUS, MY_MINS, MY_ASTR, MY_EQUL, MY_TICK,
   //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
      MY_EXCL, BCK_A_L, BCK_S_L, BCK_C_L, BCK_R_L, MY_BCKSL,                           MY_SLSH, BCK_R_R, BCK_C_R, BCK_S_R, BCK_A_R, MY_QUES,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
